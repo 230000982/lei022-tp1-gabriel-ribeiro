@@ -1,0 +1,114 @@
+{
+  "info": {
+    "name": "LEI022 TP1 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET items",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/api/items"
+      }
+    },
+    {
+      "name": "POST item",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Primeiro item\"}"
+        },
+        "url": "http://localhost:3000/api/items"
+      }
+    },
+    {
+      "name": "GET item 1",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/api/items/1"
+      }
+    },
+    {
+      "name": "PUT item 1",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Item atualizado\"}"
+        },
+        "url": "http://localhost:3000/api/items/1"
+      }
+    },
+    {
+      "name": "DELETE item 1",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:3000/api/items/1"
+      }
+    },
+    {
+      "name": "POST book",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"title\":\"Clean Code\",\"author\":\"Robert C. Martin\",\"status\":\"disponivel\"}"
+        },
+        "url": "http://localhost:3000/api/books"
+      }
+    },
+    {
+      "name": "POST book duplicate - 409",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"title\":\"clean code\",\"author\":\"Outro Autor\",\"status\":\"disponivel\"}"
+        },
+        "url": "http://localhost:3000/api/books"
+      }
+    },
+    {
+      "name": "POST book invalid status - 400",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"title\":\"Livro X\",\"author\":\"Autor X\",\"status\":\"invalido\"}"
+        },
+        "url": "http://localhost:3000/api/books"
+      }
+    }
+  ]
+}

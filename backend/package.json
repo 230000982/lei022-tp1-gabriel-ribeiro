@@ -1,0 +1,12 @@
+{
+  "name": "lei022-tp1",
+  "version": "1.0.0",
+  "description": "TP1 - Primeira API REST",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
